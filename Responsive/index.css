@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    color: #5f5f79;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    align-items: center;
+    margin: auto;
+    height: 10vh;
+    font-size: 20px;
+}
+.logo, .nav-links, .shopcart {
+    display: flex;
+}
+.logo {
+    flex: 1.2;
+    justify-content: flex-start;
+}
+.logo h4{
+    padding:  5px;
+    font-weight: 400;
+}
+nav {
+    flex: 2;
+}
+.nav-links {
+    justify-content: space-around;
+    list-style: none;
+}
+.nav-links  .nav-link {
+   text-decoration: none;
+}
+.nav-links .nav-link:hover {
+    color: brown;
+    font-weight: 500;
+    text-shadow: #5f5f79 1px 1px 3px;
+}
+.shopcart {
+    flex: .8;
+    justify-content: flex-end;
+}
+main .pretation {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    min-height: 80vh;
+    flex-direction: row;
+    align-items: center;
+}
+.pretation .intro {
+    flex: 1;
+}
+.pretation .intro .intro-text h1 {
+    font-size: 44px;
+	font-weight: 500;
+	background: linear-gradient(to right, #494964, #6f6f89);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.pretation .intro .intro-text p {
+    margin-top: 10px;
+    font-size: 22px;
+}
+.cta {
+}
+.cta .cta-select, .cta-add{
+    width: 150px;
+    height: 50px;
+    background-color: transparent;
+    outline: none;
+    margin-right: 20px;
+    margin-top: 50px;
+    font-size: 16px;
+    border: brown 2px solid;
+    color: brown;
+    box-shadow: gray 1px 1px 2px;
+}
+.cta .cta-add {
+    color: white;
+    background-color: brown;
+}
+.pretation .cover {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+}
+.pretation .cover .cover-img {
+    margin: auto;
+    /* height: 60vh; */
+}
+.pretation .cover-img img {
+    /* height: 100%; */
+    width: 90%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    filter: drop-shadow(0px 5px 3px black);
+	animation: drop 1.5s ease;
+}
+.pretation .cover .laptop-select {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+@keyframes drop {
+	0% {
+		opacity: 0;
+		transform: translateY(-80px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+.big-circle {
+    position: absolute;
+    top:0;
+    right: 0;
+    opacity: .7;
+    z-index: -1;
+}
+.medium-circle {
+    position: absolute;
+    right: 30%;
+    top: 35%;
+    opacity: .5;
+    z-index: -1;
+}
+.small-circle{
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    opacity: .35;
+    z-index: -1;
+}
+@media screen and ( max-width: 1024px){
+    header {
+        font-size: 16px;
+    }
+    header h4 {
+        display: none;
+    }
+    header .logo {
+        flex: 0;
+    }
+    header .shopcart{
+        flex: 0;
+    }
+    main .pretation {
+		flex-direction: column;
+    }
+    .pretation .intro, .intro-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .pretation .intro .intro-text h1 {
+        font-size: 30px;
+    }
+    .pretation .intro .intro-text p{
+        font-size: 20px;
+    }
+    .cta .cta-select, .cta-add{
+        width: 100px;
+        height: 30px;
+        font-size: 12px;
+        background-color: transparent;
+    }
+    .big-circle {
+        width: 70%;
+        opacity: .3;
+    }
+    .medium-circle {
+        top:30%;
+        width: 60%;
+    }
+    .pretation .cover .laptop-select {
+        width: 50%;
+        
+    }
+}
